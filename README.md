@@ -4,153 +4,205 @@
 
 ### AI Systems Architect • Distributed Inference & Orchestration • Client-Embedded Engineering
 
-```
-[SYSTEM TOPOLOGY: PRODUCTION AI ORCHESTRATION & CONTROL PLANE]
-
-  +------------------------------------------------------------------------------------+
-  |                               INTERACTIVE CLIENT LAYER                             |
-  |   Next.js / React  |  D3.js Quantitative Streams  |  Human-in-the-Loop Telemetry   |
-  +-----------------------------------------+------------------------------------------+
-                                            | (Bi-directional WebSocket / gRPC)
-  +-----------------------------------------v------------------------------------------+
-  |                              AGENTIC ORCHESTRATION LAYER                           |
-  |     A2A State Machine Mesh  |  Intent-Scoping Engine  |  FastMCP Context Router    |
-  +--------------------+------------------------------------+--------------------------+
-                       |                                    |
-  +--------------------v-------------------+   +------------v--------------------------+
-  |    DETERMINISTIC EVALUATION GATEWAY    |   |     LOW-CARBON INFERENCE INFRA        |
-  |  Langfuse Tracing & Latency Profiling  |   |  Domain-Quantized Vector Embeddings   |
-  |  Automated Regression Test Suites      |   |  Semantic Caching & Token Pruning     |
-  |  NIST RMF / EU AI Act / GDPR Policy    |   |  AWS Bedrock / Azure Foundry Hybrid   |
-  +----------------------------------------+   +---------------------------------------+
-```
-
 <p align="center">
-  <a href="https://linkedin.com/in/nishantm14"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:nishant.mishra123t@outlook.com"><img src="https://img.shields.io/badge/Outlook-0078D4?style=flat-square&logo=microsoft-outlook&logoColor=white" alt="Email" /></a>
-  <img src="https://img.shields.io/badge/Location-Pune%2C%20India-1E222A?style=flat-square" alt="Location" />
-  <img src="https://img.shields.io/badge/Architecture-Enterprise%20Distributed%20AI-0F141C?style=flat-square" alt="Focus" />
+  <a href="https://linkedin.com/in/nishantm14"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:nishant.mishra123t@outlook.com"><img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email" /></a>
+  <img src="https://img.shields.io/badge/Location-Pune%2C%20India-1E293B?style=for-the-badge&logo=google-maps&logoColor=38BDF8" alt="Location" />
+  <img src="https://img.shields.io/badge/Focus-Enterprise%20AI%20Mesh-0F172A?style=for-the-badge&logo=target&logoColor=818CF8" alt="Focus" />
 </p>
 
 </div>
 
 ---
 
-## Architectural Core
+## 🛰️ Production AI Topology & Control Plane
 
-```
-========================================================================================
-LAYER 01: AGENTIC MESH & STATE ORCHESTRATION
-========================================================================================
-- Engineered resilient agent-to-agent (A2A) topologies governed by explicit state-machine
-  transitions, transforming bespoke pipelines into reusable deployment models.
-- Implemented protocol-level context routing and dynamic intent-scoping across enterprise 
-  data stores (Salesforce Lightning, AWS S3, GreenplumDB, Databricks Unity Catalog).
-- Standardized cross-cloud inference runtimes spanning Azure AI Foundry and Amazon Bedrock.
+```mermaid
+flowchart TD
+    classDef clientLayer fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef orchLayer fill:#0f172a,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
+    classDef evalLayer fill:#0f172a,stroke:#34d399,stroke-width:2px,color:#f8fafc;
+    classDef infraLayer fill:#0f172a,stroke:#fbbf24,stroke-width:2px,color:#f8fafc;
+    classDef storageLayer fill:#0f172a,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
 
-========================================================================================
-LAYER 02: DETERMINISTIC EVALUATION & GOVERNANCE GATES
-========================================================================================
-- Eliminated non-deterministic failure modes in production by integrating Langfuse tracing,
-  FastMCP servers, and assertion-driven evaluation harnesses into continuous CI/CD gates.
-- Built regression test suites verifying 200+ edge-case scenarios for mission-critical
-  clinical and quantitative finance systems.
-- Operationalized automated governance frameworks enforcing NIST RMF, EU AI Act, and GDPR 
-  compliance at the model inference and data boundary layers.
+    subgraph Client ["Client & Visualization Plane"]
+        A["Next.js / React Control UI"]:::clientLayer
+        B["D3.js Real-Time Stream Visualizer"]:::clientLayer
+    end
 
-========================================================================================
-LAYER 03: CARBON-AWARE & RESOURCE-OPTIMIZED INFERENCE
-========================================================================================
-- Lowered computational density and active compute footprints by engineering domain-specific
-  quantized vector embeddings, achieving a 30% reduction in inference latency.
-- Deployed semantic caching layers and prompt token-pruning protocols to eliminate redundant 
-  evaluations and optimize GPU cycle utilization.
-- Designed distributed data pipelines handling high-throughput ETL orchestration across
-  multi-region hybrid clouds.
+    subgraph Orchestration ["Agentic Mesh & State Control"]
+        C["A2A State Machine Engine"]:::orchLayer
+        D["FastMCP Protocol & Context Router"]:::orchLayer
+    end
 
-========================================================================================
-LAYER 04: REACTIVE CLIENT CONTROL PLANES & STREAMING UI
-========================================================================================
-- Engineered low-latency, full-stack Next.js and D3.js visualization platforms for real-time
-  Monte Carlo, Parametric, and Historical VaR simulations, cutting desk latency by ~40%.
-- Developed reactive state-machine interfaces delivering sub-second visual updates for
-  streaming telemetry, multi-agent status graphs, and human-in-the-loop interventions.
-========================================================================================
+    subgraph Gateway ["Deterministic Verification Gateway"]
+        E["Langfuse Continuous Tracing & Latency Gates"]:::evalLayer
+        F["NIST RMF / EU AI Act Automated Compliance"]:::evalLayer
+    end
+
+    subgraph Compute ["Low-Carbon Inference Infrastructure"]
+        G["Domain-Quantized Vector Embeddings"]:::infraLayer
+        H["AWS Bedrock / Azure AI Foundry Hybrid"]:::infraLayer
+    end
+
+    subgraph Data ["Enterprise Data Fabric"]
+        I["Databricks Unity Catalog | GreenplumDB | S3"]:::storageLayer
+    end
+
+    A <-->|WebSocket Stream| C
+    B <-->|Telemetry Feed| D
+    C -->|Intent Scoping| D
+    D -->|Deterministic Eval| E
+    D -->|Vector Retrieval| G
+    E -->|Safety Assertion| F
+    G -->|Optimized Compute| H
+    H <-->|ETL Ingestion| I
 ```
 
 ---
 
-## Production System Architectures
+## 🏛️ Architectural Pillars
 
-### 1. High-Precision Clinical Decision Support System (MediMind)
-*Domain: Healthcare Systems • NLP • Deterministic RAG*
+<table>
+<tr>
+<td width="50%" valign="top">
 
-```
-+--------------------------------------------------------------------------------------+
-| [Clinical Corpus] -> [Specialized Embeddings] -> [Hybrid Vector / Graph Store]      |
-|                                                                 |                    |
-| [Query Engine]    <- [Deterministic 200+ Test Bench] <- [LangChain State Graph]      |
-+--------------------------------------------------------------------------------------+
-```
-- **Architecture**: Retrieval-Augmented Generation pipeline integrated with domain-specific embedding models and graph-indexed medical ontologies.
-- **Verification**: Enforced strict boundary conditions using an automated 200+ scenario deterministic validation suite, yielding **90% diagnostic accuracy**.
-- **Efficiency**: Specialized feature extraction reduced vector search overhead and inference latency by **30%**.
+### 1. Agentic Mesh & State Orchestration
+<img src="https://img.shields.io/badge/Status-Production%20Grade-818CF8?style=flat-square" /> <img src="https://img.shields.io/badge/Stack-LangGraph%20%7C%20FastMCP-0F172A?style=flat-square" />
+
+- **State-Machine Governance**: Architected resilient agent-to-agent (A2A) topologies with deterministic state transitions, replacing fragile ad-hoc chains with verifiable workflows.
+- **Enterprise Data Federation**: Deployed unified context-routing layers across disparate data architectures including Salesforce Lightning, AWS S3, GreenplumDB, and Databricks Unity Catalog.
+- **Unified Runtime**: Standardized multi-model execution across Azure AI Foundry and Amazon Bedrock.
+
+</td>
+<td width="50%" valign="top">
+
+### 2. Deterministic Evaluation & Observability
+<img src="https://img.shields.io/badge/Status-Continuous%20Eval-34D399?style=flat-square" /> <img src="https://img.shields.io/badge/Stack-Langfuse%20%7C%20NIST%20RMF-0F172A?style=flat-square" />
+
+- **Continuous Tracing**: Integrated **Langfuse** tracing, custom assertions, and latency monitors into automated CI/CD verification gates.
+- **Automated Regression Benches**: Validated multi-step agent reasoning across 200+ edge-case test fixtures for clinical and quantitative financial systems.
+- **Regulatory Frameworks**: Operationalized policy enforcement compliant with **NIST RMF**, **EU AI Act**, and **GDPR** at model runtime and boundary layers.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 3. Sustainable, Low-Latency Inference
+<img src="https://img.shields.io/badge/Status-30%25%20Latency%20Cut-FBBF24?style=flat-square" /> <img src="https://img.shields.io/badge/Stack-Quantized%20Embeddings-0F172A?style=flat-square" />
+
+- **Quantized Embedding Pipelines**: Engineered domain-specific embedding representations, reducing inference latency by **30%** and significantly trimming active GPU compute footprint.
+- **Semantic Caching & Pruning**: Deployed vector similarity caches and token pruning to eliminate redundant inference calls and minimize energy draw.
+- **High-Throughput Ingestion**: Architected distributed ETL pipelines for zero-loss real-time data synchronization across cloud boundaries.
+
+</td>
+<td width="50%" valign="top">
+
+### 4. Reactive Client-Facing Control Planes
+<img src="https://img.shields.io/badge/Status-Sub--Second%20Telemetry-38BDF8?style=flat-square" /> <img src="https://img.shields.io/badge/Stack-Next.js%20%7C%20D3.js-0F172A?style=flat-square" />
+
+- **Quantitative Risk Dashboards**: Built real-time **Next.js & D3.js** calculation platforms for Monte Carlo, Parametric, and Historical VaR simulations, reducing insight generation latency by **~40%**.
+- **Human-in-the-Loop Visualizers**: Designed reactive state-machine streaming interfaces for live agent trace telemetry, dynamic graph rendering, and executive steering.
+- **Zero-Layout-Shift Systems**: Engineered modular, high-density component libraries in React and Tailwind CSS.
+
+</td>
+</tr>
+</table>
 
 ---
 
-### 2. Quantitative Risk & Value-at-Risk (VaR) Engine
-*Domain: Capital Markets • Quantitative Simulation • BCBS FRTB Compliance*
+## 🧪 Selected Production Implementations
 
+### 1. MediMind: Deterministic Clinical Decision Architecture
+
+```mermaid
+flowchart LR
+    classDef comp fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
+    classDef check fill:#0f172a,stroke:#34d399,stroke-width:1.5px,color:#f8fafc;
+
+    A["Clinical Corpus"]:::comp --> B["Domain Embeddings (-30% Latency)"]:::comp
+    B --> C["Hybrid Vector / Graph Store"]:::comp
+    C --> D["LangChain Agentic State Graph"]:::comp
+    D --> E["200+ Case Deterministic Test Gate"]:::check
+    E --> F["90% Diagnostic Accuracy Output"]:::check
 ```
-+--------------------------------------------------------------------------------------+
-| [Multi-Asset Portfolio] -> [SA/IMA Capital Engine] -> [Monte Carlo / Parametric Sim] |
-|                                                                 |                    |
-| [Next.js Control Plane] <- [D3.js Reactive Stream] <- [Python Analytical Pipeline]   |
-+--------------------------------------------------------------------------------------+
-```
-- **Architecture**: Distributed calculation engine executing parametric, historical, and stochastic simulations across complex derivative portfolios.
-- **Compliance**: Automated Standardized Approach (SA) and Internal Models Approach (IMA) capital charge pipelines under BCBS FRTB guidelines.
-- **Latency**: Re-architected data ingestion and dynamic rendering in D3.js, reducing sensitivity backtesting latency by **~40%**.
+
+- **Core Capabilities**: Multi-step clinical reasoning engine combining medical ontologies, semantic embeddings, and automated boundary checking.
+- **Verification Gate**: Validated against an automated 200+ case regression test bench to guarantee deterministic diagnostic recommendations.
 
 ---
 
-### 3. Deep Convolutional Biosignal Diagnostic Pipeline
-*Domain: Biomedical Signal Processing • Edge Classification*
+### 2. Enterprise Quantitative Market Risk (VaR) Engine
 
+```mermaid
+flowchart LR
+    classDef comp fill:#0f172a,stroke:#818cf8,stroke-width:1.5px,color:#f8fafc;
+    classDef out fill:#0f172a,stroke:#fbbf24,stroke-width:1.5px,color:#f8fafc;
+
+    A["Multi-Asset Book"]:::comp --> B["BCBS FRTB SA/IMA Calculator"]:::comp
+    B --> C["Monte Carlo & Parametric Simulation"]:::comp
+    C --> D["Python Analytical Stream"]:::comp
+    D --> E["Next.js + D3.js Visual Control Plane"]:::out
+    E --> F["-40% Desk Latency"]:::out
 ```
-+--------------------------------------------------------------------------------------+
-| [Raw ECG Signals] -> [FFT / MFCC Spectral Transform] -> [SMOTE Data Augmentation]    |
-|                                                                 |                    |
-| [Multi-Class Diagnostic Output] <- [Top 10 Finalist: MSFT Societal Impact Project]   |
-+--------------------------------------------------------------------------------------+
-```
-- **Architecture**: 1D/2D Convolutional Neural Network processing multi-channel spectral signatures for 5 distinct cardiovascular pathologies.
-- **Performance**: Attained **90% categorical accuracy** on balanced imbalanced biological datasets.
+
+- **Core Capabilities**: High-throughput risk simulation engine automating BCBS FRTB Standardized and Internal Model Approach capital charge computations.
+- **Performance**: Interactive D3.js visualizers streamlined sensitivity backtesting, cutting analysis latency by ~40%.
 
 ---
 
-## Technical Inventory & Systems Matrix
+### 3. Biosignal Neural Diagnostic Pipeline (Microsoft Learn Societal Impact Finalist)
 
-| Subsystem Layer | Technologies & Frameworks |
+```mermaid
+flowchart LR
+    classDef comp fill:#0f172a,stroke:#c084fc,stroke-width:1.5px,color:#f8fafc;
+    classDef res fill:#0f172a,stroke:#34d399,stroke-width:1.5px,color:#f8fafc;
+
+    A["Raw Multi-Channel Cardiac Signals"]:::comp --> B["FFT / MFCC Spectral Transform"]:::comp
+    B --> C["SMOTE Synthetic Balancing"]:::comp
+    C --> D["Deep CNN Multi-Class Classifier"]:::comp
+    D --> E["90% Accuracy Across 5 Pathologies"]:::res
+```
+
+---
+
+## 🛠️ Systems & Technology Matrix
+
+| Architectural Layer | Core Stack & Technologies |
 | :--- | :--- |
-| **Agentic Mesh & State Control** | LangGraph, LangChain, LlamaIndex, FastMCP, WebSockets, Python, TypeScript |
-| **Inference Optimization & Cloud** | Amazon Bedrock, Azure AI Foundry, AWS S3, Quantized Embeddings, Semantic Caching |
-| **Verification & Observability** | Langfuse, Deterministic Assertion Suites, NIST RMF, GDPR, EU AI Act Compliance |
-| **Data Topology & Stores** | Databricks Unity Catalog, Neo4j (Cypher), PostgreSQL, GreenplumDB, MySQL |
-| **Interface & Control Planes** | Next.js, React, Tailwind CSS, D3.js, Zero-Layout-Shift UI Systems |
+| **Agentic Mesh & State Control** | `LangGraph` `LangChain` `LlamaIndex` `FastMCP` `WebSockets` `Python` `TypeScript` |
+| **Verification & Observability** | `Langfuse` `NIST RMF` `EU AI Act` `GDPR Compliance` `Automated Assertions` |
+| **Inference & Green Infrastructure** | `Amazon Bedrock` `Azure AI Foundry` `AWS S3` `Quantized Embeddings` `Semantic Caching` |
+| **Data Fabric & Topologies** | `Databricks Unity Catalog` `Neo4j (Cypher)` `PostgreSQL` `GreenplumDB` `MySQL` |
+| **Visualization & Front-End** | `Next.js` `React` `Tailwind CSS` `D3.js` `State-Driven UI` `High-Density Telemetry` |
 
 ---
 
-## Technical Honors & Validations
+## 🎖️ Technical Honors & Validations
 
-```
-- Top 100 Global Rank    :: Amazon ML Challenge 2025
-- Zonal Finalist         :: Smart India Hackathon 2024
-- Top 10 Finalist        :: Microsoft Learn Societal Impact Initiative
-- Certified Fluency      :: Anthropic (AI Fluency for Builders)
-- Neural Deep Learning   :: NVIDIA (Fundamentals of Deep Learning)
-- Advanced ML Track      :: Manipal University Jaipur (BTech IT Specialization)
-```
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### Competitive Benchmarks
+- **Top 100 Global Rank** — Amazon ML Challenge 2025
+- **Zonal Finalist** — Smart India Hackathon 2024
+- **Top 10 Finalist** — Microsoft Learn Societal Impact Initiative
+
+</td>
+<td width="50%" valign="top">
+
+#### Technical Specializations & Programs
+- **Anthropic**: AI Fluency for Builders
+- **NVIDIA**: Fundamentals of Deep Learning
+- **McKinsey & Company**: Forward Scholar
+- **BCG**: Data Science & Advanced Analytics
+- **Yale University**: Financial Markets
+
+</td>
+</tr>
+</table>
 
 ---
 
